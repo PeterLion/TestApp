@@ -3,9 +3,56 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
-        <title>Blank App</title>
+        <title>Hybrid App-Test</title>
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="css/styles.css">
+
+        <script type="text/javascript">
+        	window.onload=function(){
+        		document.getElementById('btnClc').addEventListener('click',calcAge);
+        	}
+        	function calcAge(e){
+                 var age = document.getElementById('dogAge').value;
+                 age *= 7;
+                 var result = "In Dog Years,Your Dog Is "+ age;
+                 document.getElementById('result').innerHTML=result ;
+        		}     
+        		   </script>
     </head>
     <body>
         <script type="text/javascript" src="cordova.js"></script>
+          <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-md-6 col-lg-4">
+                    <h1>My Testing App</h1>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12 col-md-6 col-lg-4">
+                    <label for="dogAge">Dog Age in Human Format Years :</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12 col-md-6 col-lg-4">
+                   <div class="form-group">
+                       <input class="form-control" type="number" id="dogAge" name="">
+                   </div>
+                    
+                </div>
+            </div> 
+             <div class="row">
+                <div class="col-xs-12 col-md-6 col-lg-4">
+                    <button class="btn btn-success" id="btnClc">Calculate</button>
+                </div>
+            </div>    
+            <div class="row">
+                <div class="col-xs-12 col-md-6 col-lg-4">
+                    <h3 id="result"></h3>
+                </div>
+            </div>  
+                
+                
+          </div>
+        
     </body>
 </html>
